@@ -41,3 +41,5 @@ int main(){
   print(arr, n);
   return 0;
 }
+
+// 1,5,7,8,9,10
