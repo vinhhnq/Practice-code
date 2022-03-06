@@ -1,5 +1,4 @@
-#include <iostream>
-
+#include<iostream>
 using namespace std;
 
 struct Node
@@ -9,9 +8,9 @@ struct Node
 };
 
 struct List {
-    Node *head;
-    Node *tail;
+  Node *head;
+  Node *tail;
 };
 int main(){
-  
+
 }

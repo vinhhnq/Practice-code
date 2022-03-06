@@ -3,9 +3,9 @@
 using namespace std;
 
 int a[8]; //
-bool yes(int x2, int y2){
-  for(int i=1; i<x2;i++){
-    if(a[i] == y2 || abs(i-x2) == abs(a[i] - y2)){
+bool yes(int x, int y){
+  for(int i=1; i<x;i++){
+    if(a[i] == y || abs(i-x) == abs(a[i] - y)){
       return false;
     }
   }
@@ -24,7 +24,6 @@ void Try(int i,int n){
       a[i] = j;
       if(i == n){
         output(n);
-
       }
       Try(i+1,n);
     }
