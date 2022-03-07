@@ -12,5 +12,5 @@ struct List {
   Node *tail;
 };
 int main(){
-
+  cout<<"asdas";
 }
