@@ -1,4 +1,4 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 
 void input(int a[], int n){
@@ -22,6 +22,7 @@ int min(int a[], int n)
     for (int i = 1; i < n; i++)
       if (min > a[i])
         min = a[i];
+        
     return min;
 }
 int main(){
