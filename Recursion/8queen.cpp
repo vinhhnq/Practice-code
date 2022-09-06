@@ -1,5 +1,5 @@
-#include<iostream>
-#include<cmath>
+#include <iostream>
+#include <cmath>
 using namespace std;
 
 int a[8]; //
@@ -17,6 +17,7 @@ void output(int n){
   }
   cout<<"\n";
 }
+
 void Try(int i,int n){
   for(int j =1; j <= n; j++){
     if(yes(i,j)) // queen tai vi tri i dat vao cot thu j

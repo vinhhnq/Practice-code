@@ -14,11 +14,11 @@ int partition(int arr[],int low, int hight){
       i++;
       swap(&arr[i], &arr[j]);
     }
-  } 
+  }
+  
   swap(&arr[i+1], &arr[hight]);
   return (i+1);
 }
-
 void quicksort(int arr[], int low, int hight){
   if(low < hight){
     int p = partition(arr,low, hight);
@@ -26,6 +26,7 @@ void quicksort(int arr[], int low, int hight){
     quicksort(arr,p+1,hight);
   }
 }
+
 
 void print(int arr[], int size){
   for(int i = 0; i < size; i++){
