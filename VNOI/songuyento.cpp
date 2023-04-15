@@ -4,26 +4,26 @@
 using namespace std;
 
 void solve(){
-    long a, b, n;
-    cin>>a>>b;
+  long a, b, n;
+  cin>>a>>b;
 
-    for(int i = a; i <= b; i++){
-        if(i == 1)
-            continue;
-        n = 0;
-        for(int j = 2; j <= sqrt(i); j++ ){
-            if(i % j == 0)
-            {
-                n++;
-                break;
-            }
-        }
-        if(n == 0){ 
-            cout<<i<<"\n";
-        }   
-        
+  for(int i = a; i <= b; i++){
+    if(i == 1)
+      continue;
+    n = 0;
+    for(int j = 2; j <= sqrt(i); j++ ){
+      if(i % j == 0)
+      {
+
+        n++;
+        break;
+      }
     }
-    
+    if(n == 0){ 
+      cout<<i<<"\n";
+    }   
+  }
+
 
 }
 int main() {
@@ -31,4 +31,5 @@ int main() {
     cin.tie(NULL);
     solve();
     return 0;
+
 }

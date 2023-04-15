@@ -1,4 +1,14 @@
 {
   "C_Cpp.errorSquiggles": "Enabled",
-  "editor.fontSize": 14
+  "editor.fontSize": 14,
+  "files.associations": {
+    "*.json.liquid": "json",
+    "*.yaml.liquid": "yaml",
+    "*.md.liquid": "markdown",
+    "*.js.liquid": "liquid-javascript",
+    "*.css.liquid": "liquid-css",
+    "*.scss.liquid": "liquid-scss",
+    "*.html": "html",
+    "ostream": "cpp"
+  }
 }
