@@ -21,6 +21,7 @@ Node *createNode(int x){
     p->next = NULL;
     p->data = x;
     return p;
+    ngaisndlkasd
 }
 bool isEmpty(List l){
     if (l.head == NULL) return true;
