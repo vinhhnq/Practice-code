@@ -49,7 +49,7 @@ class QuickUnionUF
       return root(p) == root(q);
     }
     void Union(int p, int q){
-      int i = root(p);
+      int i = root(p); 
       int j = root(q);
       id[i]=j;
     }
@@ -90,6 +90,7 @@ class QuickWeight
       else {
         id[j] = i; 
         sz[i] += sz[j];
+        
       }
     }
 };
