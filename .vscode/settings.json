@@ -9,6 +9,7 @@
     "*.css.liquid": "liquid-css",
     "*.scss.liquid": "liquid-scss",
     "*.html": "html",
-    "ostream": "cpp"
+    "ostream": "cpp",
+    "ios": "cpp"
   }
 }
