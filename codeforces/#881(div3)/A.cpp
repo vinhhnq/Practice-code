@@ -18,7 +18,7 @@
 #include <fstream>
  
 using namespace std;
-
+ 
 typedef long long ll;
 typedef long double ld;
 typedef pair<int,int> p32;
@@ -47,27 +47,22 @@ double eps = 1e-12;
 #define fast_cin() ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
 #define all(x) (x).begin(), (x).end()
 #define sz(x) ((ll)(x).size())
- 
 
 void solve(){
-	int n; cin >> n;
-	string s; cin >> s;
-	v32 left(26, 0), right(26, 0);
-	for (int i = 1; i < n; i++) right[s[i]-97]++;
-	int left_score = 1, right_score = 0;
-	for (int i = 0; i < 26; i++) {
-		if (right[i] > 0) right_score++;
+	int n; cin>>n;
+	v32 a(n);
+	for(int i = 0; i < n; i++){
+		cin>>a[i];
+	}	
+	sort(begin(a), end(a));
+	int result = 0;
+	int end = n-1;
+	while(start < end) {
+		result += abs((a[start] - a[end]);
+		start++;
+		end--;
 	}
-	int best = left_score + right_score;
-	left[s[0] - 97]++;
-	for (int i = 1; i < n; i++) {
-		right[s[i] - 97]--;
-		if (right[s[i] - 97] == 0) right_score--;
-		if (left[s[i] - 97] == 0) left_score++;
-		left[s[i] - 97]++;
-		best = max(best, left_score + right_score);
-	}
-	cout << best << "\n";
+	cout<<result<<endl;
 }
 int main()
 {
@@ -78,3 +73,7 @@ int main()
  }
  return 0;
 }
+
+
+
+
