@@ -1,4 +1,4 @@
-#include <bits/stdc++.h> 
+// #include <bits/stdc++.h> 
 #include <complex>
 #include <queue>
 #include <set>
@@ -37,33 +37,36 @@ double eps = 1e-12;
 #define forsn(i,s,e) for(ll i = s; i < e; i++)
 #define rforn(i,s) for(ll i = s; i >= 0; i--)
 #define rforsn(i,s,e) for(ll i = s; i >= e; i--)
+#define in(v) for(int x : v) cin>>x;
 #define ln "\n"
 #define dbg(x) cout<<#x<<" = "<<x<<ln
 #define mp make_pair
-#define pb push_back
+#define pb(n) push_back(n)
 #define fi first
 #define se second
 #define INF 2e18
 #define fast_cin() ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
 #define all(x) (x).begin(), (x).end()
 #define sz(x) ((ll)(x).size())
+ 
 
 void solve(){
-	int n; cin>>n;	
-	v32 a(n);
-	for(int i = 0; i < n; i++){
-		cin>>a[i];
-	}	
-	sort(begin(a), end(a));
-	int result = 0;
-	int l = 0;
-	int r = n-1;
-	while(l < r) {
-		result += abs(a[r--] - a[l++]);
+	int n; cin>>n;
+	v32 v(n);
+	int a1 = 0, a2 = 0, res = 0;
+	for(int a : v){
+		cin>>a;
+		if(a == 1) a1++;
+		a2++;
 	}
-	cout<<result<<endl;
-}
+	while(a1 < a2 || a2%2 == 1){
+		a1++;
+		a2--;
+		res++;
+	}
+	cout<<res<<endl;
 
+}
 int main()
 {
  fast_cin();
@@ -73,9 +76,3 @@ int main()
  }
  return 0;
 }
-
-
-
-
-
-
