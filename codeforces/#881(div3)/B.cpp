@@ -37,33 +37,46 @@ double eps = 1e-12;
 #define forsn(i,s,e) for(ll i = s; i < e; i++)
 #define rforn(i,s) for(ll i = s; i >= 0; i--)
 #define rforsn(i,s,e) for(ll i = s; i >= e; i--)
+#define in(v) for(int x : v);
 #define ln "\n"
 #define dbg(x) cout<<#x<<" = "<<x<<ln
 #define mp make_pair
-#define pb push_back
+#define pb(n) push_back(n)
 #define fi first
 #define se second
 #define INF 2e18
 #define fast_cin() ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
 #define all(x) (x).begin(), (x).end()
 #define sz(x) ((ll)(x).size())
+ 
 
 void solve(){
 	int n; cin>>n;
-	v32 a(n);
-	for(int i = 0; i < n; i++){
-		cin>>a[i];
-	}	
-	sort(begin(a), end(a));
-	int result = 0;
-	int l = 0;
-	int r = n-1;
-	while(l < r) {
-		result += abs(a[r--] - a[l++]);
+	v32 v(n);
+	ll sum = 0;
+	for(int &x : v ){
+		cin>>x;
+		sum += abs(x);
 	}
-	cout<<result<<endl;
+	int rs = 0;
+	int cnt = 0;	
+	for(int x : v){
+		if(x == 0 && cnt == 0) continue;
+		if(x <= 0){
+			cnt++;
+		}
+		else {
+			if(cnt > 0){
+				rs++;
+			}
+			cnt = 0;
+		}
+	}
+	if(cnt){
+		rs++;
+	}
+	cout<<sum<<" "<<rs<<endl;
 }
-
 int main()
 {
  fast_cin();
@@ -73,7 +86,3 @@ int main()
  }
  return 0;
 }
-
-
-
-
