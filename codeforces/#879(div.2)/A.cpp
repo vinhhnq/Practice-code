@@ -56,10 +56,12 @@ void solve(){
 	int a1 = 0, a2 = 0, res = 0;
 	for(int a : v){
 		cin>>a;
-		if(a == 1) a1++;
-		a2++;
+		if(a == 1) 
+			a1++;
+		else
+			a2++;
 	}
-	while(a1 < a2 || a2%2 == 1){
+	while(a1 < a2 || a2%2==0){
 		a1++;
 		a2--;
 		res++;

@@ -58,6 +58,7 @@ void solve(){
 	for (int i = 0; i < 26; i++) {
 		if (right[i] > 0) right_score++;
 	}
+	
 	int best = left_score + right_score;
 	left[s[0] - 97]++;
 	for (int i = 1; i < n; i++) {
